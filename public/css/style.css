@@ -215,11 +215,25 @@ button.btn-modern:hover,
     transition: 0.3s ease;
 }
 
-.btn-modern:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+/* Smooth animation base */
+/* Smooth transition */
+.navbar .nav-link {
+    transition: all 0.3s ease;
 }
 
+/* Desktop hover only */
+@media (hover: hover) {
+    .navbar .nav-link:hover {
+        color: #ffffff;
+        transform: translateY(-2px);
+    }
+}
+
+/* Mobile tap feedback */
+.navbar .nav-link:active {
+    color: #ffffff;
+    opacity: 0.8;
+}
 /* ===================================================== */
 /* CONTACT PAGE */
 /* ===================================================== */
