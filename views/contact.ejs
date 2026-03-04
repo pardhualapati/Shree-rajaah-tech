@@ -1,0 +1,115 @@
+<%- include('partials/header') %>
+
+<!-- HERO SECTION -->
+<section class="contact-hero text-white text-center">
+    <div class="container">
+        <h1 class="display-5 fw-bold fade-in-up">
+            Let’s Build Something Great
+        </h1>
+
+        <p class="lead mt-3 fade-in-up delay-1">
+            Tell us about your project. We’ll respond within 24 hours.
+        </p>
+    </div>
+</section>
+
+<!-- CONTACT CARD SECTION -->
+<section class="contact-wrapper">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+
+                <div class="contact-card">
+
+                    <!-- LEFT INFO PANEL -->
+                    <div class="contact-info">
+                        <h3>Contact Information</h3>
+
+                        <div class="info-item">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <span>Troy, Michigan</span>
+                        </div>
+
+                        <div class="info-item">
+                            <i class="bi bi-envelope-fill"></i>
+                            <span>info@shreeraajah.com</span>
+                        </div>
+
+                        <div class="info-item">
+                            <i class="bi bi-clock-fill"></i>
+                            <span>Mon – Fri | 9AM – 6PM EST</span>
+                        </div>
+
+                        <p class="mt-4 small">
+                            We partner with startups and enterprises to build
+                            scalable and secure digital solutions.
+                        </p>
+                    </div>
+
+                    <!-- RIGHT FORM PANEL -->
+                    <div class="contact-form " style="color:  black;">
+
+                        <h3 class="mb-4">Send a Message</h3>
+
+                        <% if (message) { %>
+                            <div class="alert alert-success">
+                                <%= message %>
+                            </div>
+                        <% } %>
+
+                        <form method="POST" action="/contact">
+
+                            <div class="form-floating mb-3">
+                                <input type="text"
+                                       class="form-control modern-input"
+                                       name="name"
+                                       placeholder="Full Name"
+                                       required>
+                                <label>Full Name</label>
+                            </div>
+
+                            <div class="form-floating mb-3">
+                                <input type="email"
+                                       class="form-control modern-input"
+                                       name="email"
+                                       placeholder="Email"
+                                       required>
+                                <label>Email Address</label>
+                            </div>
+
+                            <div class="form-floating mb-3">
+                                <textarea class="form-control modern-input"
+                                          name="message"
+                                          placeholder="Project Details"
+                                          style="height:120px"
+                                          required></textarea>
+                                <label>Project Details</label>
+                            </div>
+
+                            <button type="submit" class="btn btn-modern w-100">
+    Submit Inquiry
+</button>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- GOOGLE MAP -->
+<section>
+    <iframe
+        src="https://www.google.com/maps?q=Troy,Michigan&output=embed"
+        width="100%"
+        height="300"
+        style="border:0;"
+        loading="lazy">
+    </iframe>
+</section>
+
+<%- include('partials/footer') %>

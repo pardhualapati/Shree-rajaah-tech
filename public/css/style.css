@@ -1,0 +1,399 @@
+/* ===================================================== */
+/* GLOBAL SETTINGS */
+/* ===================================================== */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);   /* same as your dark sections */
+    color: white;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.section-padding {
+    padding: 100px 0;
+}
+
+/* ===================================================== */
+/* NAVBAR */
+/* ===================================================== */
+
+.custom-navbar {
+    transition: all 0.3s ease;
+    background: transparent;
+}
+
+.navbar-scrolled {
+    background: rgba(0, 0, 0, 0.9) !important;
+    backdrop-filter: blur(8px);
+}
+
+/* ===================================================== */
+/* HOME HERO */
+/* ===================================================== */
+
+.home-hero {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+                url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1950&q=80');
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+/* Subtle Glow Effect */
+
+.home-hero::after {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(13,110,253,0.4), transparent 70%);
+    top: -100px;
+    right: -100px;
+    filter: blur(120px);
+}
+
+/* ===================================================== */
+/* ABOUT HERO */
+/* ===================================================== */
+
+.about-hero {
+    height: 75vh;
+    position: relative;
+    overflow: hidden;
+
+    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+                url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1950&q=80');
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+/* Soft Secondary Glow */
+
+.about-hero::after {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(102,16,242,0.4), transparent 70%);
+    bottom: -120px;
+    left: -120px;
+    filter: blur(120px);
+}
+
+.about-section {
+    background: linear-gradient(180deg, #111827 0%, #1f2937 100%);
+    color: white;
+    color: white;
+    padding: 80px 0;
+}
+
+p{
+color: white;
+}
+
+.about-section-alt {
+    background: #0f172a;
+    color: white;
+    padding: 80px 0;
+}
+.about-matter{
+    color: white;
+}
+
+/* ===================================================== */
+/* CONTACT HERO */
+/* ===================================================== */
+
+.contact-hero {
+    height: 60vh;
+
+    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+                url('/images/contact-bg.png');
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+/* ===============================
+   CONTACT BUTTON GRADIENT
+================================= */
+
+/* FORCE OVERRIDE BOOTSTRAP BUTTON */
+
+button.btn-modern,
+.btn.btn-modern {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364) !important;
+    border: none !important;
+    color: #ffffff !important;
+    padding: 12px 20px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+button.btn-modern:hover,
+.btn.btn-modern:hover {
+    transform: translateY(-2px);
+    opacity: 0.95;
+    color: #ffffff !important;
+}
+
+
+/* ===================================================== */
+/* APPROACH SECTION */
+/* ===================================================== */
+
+.approach-section {
+    position: relative;
+    background: linear-gradient(180deg, #111827 0%, #1f2937 100%);
+    color: white;
+    padding: 80px 0;
+}
+
+/* Soft Top Fade Effect */
+
+.approach-section::before {
+    content: "";
+    position: absolute;
+    top: -80px;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
+}
+
+.approach-card {
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 15px;
+    transition: 0.3s ease;
+}
+
+.approach-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+/* ===================================================== */
+/* BUTTONS */
+/* ===================================================== */
+
+.btn-modern {
+    background: linear-gradient(135deg, #0d6efd, #6610f2);
+    border: none;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.btn-modern:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+}
+
+/* ===================================================== */
+/* CONTACT PAGE */
+/* ===================================================== */
+
+.contact-wrapper {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+}
+
+.contact-card {
+    display: flex;
+    border-radius: 20px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.contact-info {
+    flex: 1;
+    padding: 50px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.contact-form {
+    flex: 1.3;
+    padding: 50px;
+    background: #ffffff;
+}
+
+.modern-input {
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+.modern-input:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 3px rgba(13,110,253,0.2);
+}
+
+/* ===================================================== */
+/* FOOTER */
+/* ===================================================== */
+
+.footer {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+}
+
+.footer-icons a {
+    color: white;
+    font-size: 1.4rem;
+    transition: 0.3s;
+}
+
+.footer-icons a:hover {
+    color: #0d6efd;
+    transform: translateY(-3px);
+}
+
+/* ===============================
+   FOOTER LINK FIX
+================================= */
+
+.footer-links a {
+    color: #bbbbbb;          /* Soft gray */
+    text-decoration: none;   /* Remove underline */
+    transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ffffff;          /* White on hover */
+    text-decoration: none;   /* Still no underline */
+}
+
+/* Footer Icons */
+.footer-icons a {
+    color: #bbbbbb;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.footer-icons a:hover {
+    color: #ffffff;
+}
+
+/* ===================================================== */
+/* FADE ANIMATIONS */
+/* ===================================================== */
+
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1s ease forwards;
+}
+
+.delay-1 { animation-delay: 0.4s; }
+.delay-2 { animation-delay: 0.8s; }
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===================================================== */
+/* RESPONSIVE */
+/* ===================================================== */
+
+@media (max-width: 768px) {
+
+    .contact-card {
+        flex-direction: column;
+    }
+
+    .home-hero,
+    .about-hero {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .home-hero::after,
+    .about-hero::after {
+        display: none;
+    }
+}
+
+
+/* ===================================================== */
+/* SERVICES SECTION */
+/* ===================================================== */
+
+.services-section {
+    background: linear-gradient(180deg, #111827 0%, #1f2937 100%);
+    color: white;
+}
+
+.service-card {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(8px);
+    border-radius: 15px;
+    transition: 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.service-icon {
+    font-size: 2.5rem;
+    color: #0d6efd;
+}
+
+.fade-service {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: serviceFade 1s ease forwards;
+}
+
+.delay-1 {
+    animation-delay: 0.3s;
+}
+
+.delay-2 {
+    animation-delay: 0.6s;
+}
+
+@keyframes serviceFade {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
